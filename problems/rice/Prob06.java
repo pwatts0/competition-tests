@@ -19,10 +19,8 @@ import problems.Input;
 public class Prob06 {
 
     static class usableCharacter {
-
         char c;
         Point p;
-
         public usableCharacter(char c, Point p) {
             this.c = c;
             this.p = p;
