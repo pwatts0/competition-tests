@@ -34,6 +34,7 @@ public class Prob02 {
                 System.exit(-1);
             }
         }
+        scanner.close();
     }
 
     private static void doCalc(Scanner scanner, int n) {

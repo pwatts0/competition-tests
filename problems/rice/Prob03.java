@@ -15,6 +15,7 @@ import problems.Input;
  * @author rootie
  */
 public class Prob03 {
+
     public static void main(String[] args) throws FileNotFoundException {
         // get file obj
         Scanner scanner = new Scanner(new File(Input.JPATH + "Prob03.in.txt"));
@@ -37,5 +38,6 @@ public class Prob03 {
                 }
             }
         }
+        scanner.close();
     }
 }

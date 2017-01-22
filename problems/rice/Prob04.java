@@ -10,12 +10,12 @@ import problems.Input;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author rootie
  */
 public class Prob04 {
+
     public static void main(String[] args) throws FileNotFoundException {
         // get file obj
         Scanner scanner = new Scanner(new File(Input.JPATH + "Prob04.in.txt"));
@@ -33,5 +33,6 @@ public class Prob04 {
                 }
             }
         }
+        scanner.close();
     }
 }

@@ -6,6 +6,7 @@ import java.io.IOException;
 import problems.Input;
 
 public class Prob01 {
+
     public static void main(String... aArgs) throws IOException {
         // get file obj
         Scanner scanner = new Scanner(new File(Input.JPATH + "Prob01.in.txt"));
@@ -19,5 +20,6 @@ public class Prob01 {
                 System.out.println((line.split(" ")[0]).toUpperCase().substring(0, 1) + (line.split(" ")[2]).toUpperCase().substring(0, 1) + (line.split(" ")[1]).toUpperCase().substring(0, 1));
             }
         }
+        scanner.close();
     }
 }
