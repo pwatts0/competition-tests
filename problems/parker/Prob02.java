@@ -18,19 +18,35 @@ public class Prob02 {
      String path = "C:\\Users\\pwatts\\New folder\\ExampleInputs\\" + problem;
      File file = new File(path);
      Scanner scanner = new Scanner(file);
-     int x = 0;
-     BigInteger sum = BigInteger.valueOf(0);
-     while (scanner.hasNextBigInteger()){
-         x ++;
-         if (x < 3){
-             scanner.nextLine();
-         }
-         if (x >= 3){
-             BigInteger bill = scanner.nextBigInteger();
-             sum = sum.add(bill);
+     BigInteger sum = new BigInteger("0");
+     int cases = 0;
+     BigInteger maxCaseNumber = new BigInteger("100"); //there cant be more than 100 cases at a time right?
+     scanner.nextLine();
+     BigInteger sand = new BigInteger("0");
+     
+     while (scanner.hasNextInt() || scanner.hasNextBigInteger()){
+        if (scanner.hasNextInt()){
+            
+            cases = scanner.nextInt();
+            for (int x = 0; x < cases; x++){
+                if (scanner.hasNextBigInteger()){
+                    sum = sum.add(scanner.nextBigInteger());
+                    
+                    
+                }
+                sand = sand.add(sum);
+              
+                sum = BigInteger.valueOf(0);
+               
+               
             }
-        
+             
+        }
+  
+   System.out.println(sand);
+   sand = BigInteger.valueOf(0);
  }     
-        System.out.println(sum);
-    }  
+    
+    }
 }
+
