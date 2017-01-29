@@ -56,16 +56,15 @@ public class Prob06 {
 
     private static int findWordInPuzzle(char grid[][], String word, int posInWord, ArrayList<usableCharacter> useableCharactersBank) {
         if (posInWord == 0) {
-            loop:
             for (int row = 0; row < grid.length; row++) {
                 for (int col = 0; col < grid[0].length; col++) {
                     if (grid[row][col] == word.charAt(0)) {
                         if (word.length() == 1) {
                             // Yey were done here!
                             System.out.println(word);
-                            break loop;
+                            return 0;
                         } else if (findWordInPuzzle(grid, word, 1, getBlob(grid, new Point(row, col))) == 1) {
-                            break loop;
+                            return 0;
                         }
                     }
                 }

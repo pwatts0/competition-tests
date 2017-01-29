@@ -62,5 +62,6 @@ public class Prob05 {
                 System.out.println(d.i + " " + bar);
             }
         }
+        scanner.close();
     }
 }
